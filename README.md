@@ -1,137 +1,90 @@
-Clothes Management System
+# 👕 Clothes Management System
 
-Overview: 
-The Clothes Management System is a comprehensive C# application designed to manage a clothing store's operations. It provides functionality for administrators, cashiers, and customers, with features ranging from user management to order processing and sales analytics.
+## 📌 Overview
+The **Clothes Management System** is a comprehensive **C# desktop application** for managing a clothing store's operations.  
+It supports **Admins**, **Cashiers**, and **Customers**, providing tools for **user management**, **product handling**, **order processing**, and **sales analytics**.
 
+---
 
-Features
+## ✨ Features
 
-User Management
+### 👤 User Management
 
-Admin Functions:
+**Admin Functions:**
+- Add, edit, delete, and search for admins, cashiers, and customers
+- View a complete list of users in each role
 
-Add, edit, delete, and search for admins, cashiers, and customers
+**Cashier Functions:**
+- Process customer orders
+- Delete orders (with authorization checks)
+- Calculate payments
 
-List all users in each category
+**Customer Functions:**
+- View their order details
+- Rate completed orders
 
-Cashier Functions:
+---
 
-Process orders
+### 🛍 Product Management
+- Add, edit, delete, and search for products
+- List all available products
+- Track stock quantities and availability
 
-Delete orders (with authorization checks)
+---
 
-Calculate payments
+### 📦 Order Management
+- Create new orders with multiple products
+- View detailed order summaries
+- Process payments securely
 
-Customer Functions:
+---
 
-View order details
+### 📊 Analytics & Reports
+- Track total and average revenue for specific time periods
+- Identify best-selling products
+- Monitor cashier and customer activity
+- View supplier pricing information
 
-Rate orders
+---
 
-Product Management
-Add, edit, delete, and search for products
+## 🛠 Technical Details
 
-List all available products
+### 🗄 Database
+**SQL Server** database with tables for:
+- Users (role-based: Admin, Cashier, Customer)
+- Products
+- Orders
+- OrderDetails
 
-Track product availability and quantities
+**Relationships:**
+- Admin, Cashier, and Customer linked to a shared **Users** table
+- Orders linked to both Customers and Cashiers
 
-Order Management
-Create new orders with multiple products
+---
 
-View detailed order information
+### 🏗 Architecture
+- **Object-Oriented Design** with the following classes:
+  - `User` (base class)
+  - `Admin`, `Cashier`, `Customer` (derived classes)
+  - `Product`
+  - `Order` and `OrderDetails`
+- **SQL Connection Management**:
+  - Uses parameterized queries to prevent SQL injection
+- **Validation** for:
+  - Numeric values
+  - Date formats
+  - Gender selection
+  - Product categories and sizes
 
-Process payments
+---
 
-Analytics
-Revenue tracking (total and average over specific periods)
+## ⚙ Installation
 
-Best-selling product analysis
+### 📋 Prerequisites
+- **.NET Framework 4.7.2**
+- **SQL Server** with the ability to restore databases
 
-Customer and cashier performance metrics
-
-Supplier pricing information
-
-Technical Details
-Database
-SQL Server database with tables for:
-
-Users (with role differentiation)
-
-Products
-
-Orders and OrderDetails
-
-Admin, Cashier, and Customer relationships
-
-Architecture
-Object-oriented design with classes for:
-
-Users (base class with Admin, Cashier, and Customer subclasses)
-
-Products
-
-Orders and OrderDetails
-
-SQL connection management with proper parameterization to prevent SQL injection
-
-Validation
-Input validation for:
-
-Numeric values
-
-Dates
-
-Gender selection
-
-Product categories and sizes
-
-Installation
-Prerequisites:
-
-.NET Framework 4.7.2
-
-SQL Server with the database schema set up
-
-Setup:
-
-Clone the repository
-
-Update the connection string in all classes to point to your SQL Server instance
-
-Ensure the database contains the necessary tables (Users, Admin, Cashier, Customer, Product, Orders, OrderDetails)
-
-Running:
-
-Build the solution in Visual Studio
-
-Run the executable
-
-Usage
-Login:
-
-Users must log in with valid credentials
-
-System automatically detects user role (Admin, Cashier, or Customer)
-
-Role-based Access:
-
-Admins have full access to all features
-
-Cashiers can process orders and payments
-
-Customers can view their orders and provide ratings
-
-Code Structure
-Admin.cs: Contains all admin-specific functionality
-
-Cashier.cs: Handles order processing and payment calculations
-
-Customer.cs: Manages customer order views and ratings
-
-Order.cs & OrderDetails.cs: Define order data structures
-
-Product.cs: Defines product information
-
-User.cs: Base class for all user types
-
-Program.cs: Main entry point with login and menu systems
+### 🚀 Setup
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/clothes-management-system.git
