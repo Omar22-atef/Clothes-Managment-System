@@ -1,0 +1,7 @@
+C:\Users\kan\source\repos\Clothes Project\Clothes Project\bin\Debug\Clothes Project.exe.config
+C:\Users\kan\source\repos\Clothes Project\Clothes Project\bin\Debug\Clothes Project.exe
+C:\Users\kan\source\repos\Clothes Project\Clothes Project\bin\Debug\Clothes Project.pdb
+C:\Users\kan\source\repos\Clothes Project\Clothes Project\obj\Debug\Clothes Project.csproj.AssemblyReference.cache
+C:\Users\kan\source\repos\Clothes Project\Clothes Project\obj\Debug\Clothes Project.csproj.CoreCompileInputs.cache
+C:\Users\kan\source\repos\Clothes Project\Clothes Project\obj\Debug\Clothes Project.exe
+C:\Users\kan\source\repos\Clothes Project\Clothes Project\obj\Debug\Clothes Project.pdb
